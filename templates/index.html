@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html >
+<head>
+    <meta charset="utf-8" />
+    <title>Estadisticas</title>
+    <link type="text/css" href="{{ url_for('static', filename='css/HojaEstilos.css') }}" rel="stylesheet" />
+</head>
+<body>
+    <div id="contenedorGeneral">
+        <div id="ContenedorSuperior" class="contenedor">
+            <div id="SuperiorIzquierdo" class="izquierda">
+                <img width="250" height="180" src="{{ url_for('static', filename='images/Logo.png') }}" />
+            </div>
+            <div id="SuperiorDerecha" aling="center"class="derecha">
+                <img width="250" height="180" src="{{ url_for('static', filename='images/img.svg') }}" />
+            </div>
+            <div id="Superior" aling="Center" class="centro">
+                <h1 id="titulo">ANALITICAL DATES</h1>
+                <h3 id="subtitulo">Powered by Pyton</h3>
+            </div>
+        </div>
+        <div id="ContenedorIntermedio" class="ContenedorIntermedio">
+            <div id="IntermedioIzquierdo" class="izquierda">
+                <h2>Comentarios Positivos en twiter</h2>
+                <hr />
+                <img width="350" height="250" src="{{ url_for('static', filename='images/pastel.png') }}" />
+            </div>
+            <div id="IntermedioDerecho" class="derecha">
+                <h2>Popularidad</h2>
+                <hr />
+                <img width="300" height="250" src="{{ url_for('static', filename='images/barras.png') }}"" />
+            </div>
+            <div id="IntermedioCentro" aling="Center" class="centro">
+                <h2>Uso por departamento</h2>
+                <hr />
+                <img width="350" height="250" src="{{ url_for('static', filename='images/departamento.png') }}" "  />
+            </div>
+        </div>
+        <div id="ContenedorInferior" class="ContenedorInferior">
+            <div id="InferiorIzquierdo" class="izquierda">
+                <h2>Contactos</h2>
+                <hr />
+                <a href="https://twitter.com/uber_col?lang=es">Uber</a>
+            </div>
+            <div id="InferioroDerecho" class="derecha">
+                <h2>Top Twits</h2>
+                <hr /> 
+                <ol>
+                    {%for t in arreglo%}
+                        <li>{{t}}</li>
+                    {%endfor%}
+                </ol>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
